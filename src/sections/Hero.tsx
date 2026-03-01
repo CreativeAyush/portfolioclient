@@ -19,9 +19,9 @@ export default function Hero() {
     const isSmallDesktop = width >= 1024 && width < 1280;
 
     // Radius calculation based on viewport
-    let innerR = 180;
-    let outerR = 280;
-    let profileSize = 220;
+    let innerR = 140;
+    let outerR = 210;
+    let profileSize = 170;
 
     if (isMobile) {
         innerR = width * 0.3;
@@ -32,13 +32,13 @@ export default function Hero() {
         outerR = Math.max(160, Math.min(220, outerR));
         profileSize = Math.max(110, Math.min(160, profileSize));
     } else if (isTablet) {
-        innerR = 140;
-        outerR = 210;
-        profileSize = 170;
+        innerR = 120;
+        outerR = 180;
+        profileSize = 140;
     } else if (isSmallDesktop) {
-        innerR = 160;
-        outerR = 240;
-        profileSize = 200;
+        innerR = 130;
+        outerR = 190;
+        profileSize = 150;
     }
 
     const parallaxX = reduced ? 0 : mouse.x * 14;
@@ -49,10 +49,10 @@ export default function Hero() {
             id="hero"
             className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-16 pb-12 overflow-hidden"
         >
-            <div className="w-full max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16 lg:gap-32">
-                {/* Left: Text + CTA — left aligned on desktop */}
+            <div className="w-full max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-center gap-12 md:gap-16 lg:gap-24">
+                {/* Left: Text + CTA — Always centered across breakpoints for better balance */}
                 <motion.div
-                    className="text-center md:text-left max-w-2xl flex-1 z-10"
+                    className="text-center max-w-2xl flex-1 z-10"
                     initial={{ opacity: 0, y: 40 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.4, duration: 0.7 }}
@@ -66,12 +66,12 @@ export default function Hero() {
                     <h2 className="text-xl sm:text-3xl font-display font-semibold text-white/85 mb-5">
                         {t('hero.title')}
                     </h2>
-                    <p className="text-white/50 text-sm sm:text-lg leading-relaxed max-w-lg mx-auto md:mx-0 mb-8 lg:mb-10">
+                    <p className="text-white/50 text-sm sm:text-lg leading-relaxed max-w-lg mx-auto mb-8 lg:mb-10">
                         {t('hero.subtitle')}
                     </p>
 
-                    {/* CTA Buttons — larger */}
-                    <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                    {/* CTA Buttons — centered justify-center */}
+                    <div className="flex flex-col sm:flex-row gap-4 justify-center">
                         <a
                             href="/resume.pdf"
                             target="_blank"
