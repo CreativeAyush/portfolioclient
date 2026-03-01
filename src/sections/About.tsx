@@ -13,7 +13,7 @@ export default function About() {
                 className="font-display text-3xl sm:text-4xl font-bold text-gradient mb-10 text-center"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
+                viewport={{ once: false }}
                 transition={{ duration: 0.6 }}
             >
                 {t('about.title')}
@@ -26,7 +26,7 @@ export default function About() {
                         className="glass p-6 space-y-4"
                         initial={{ opacity: 0, x: -40, y: 20 }}
                         whileInView={{ opacity: 1, x: 0, y: 0 }}
-                        viewport={{ once: true, margin: '-50px' }}
+                        viewport={{ once: false, margin: '-50px' }}
                         transition={{ duration: 0.7, delay: 0.15 }}
                     >
                         <p className="text-white/70 leading-relaxed text-sm sm:text-base">{t('about.p1')}</p>
@@ -52,7 +52,7 @@ export default function About() {
                         className="glass p-5"
                         initial={{ opacity: 0, x: 40, y: 20 }}
                         whileInView={{ opacity: 1, x: 0, y: 0 }}
-                        viewport={{ once: true, margin: '-50px' }}
+                        viewport={{ once: false, margin: '-50px' }}
                         transition={{ duration: 0.7, delay: 0.3 }}
                     >
                         <h3 className="flex items-center gap-2 text-sm font-semibold text-accent-cyan mb-3">
@@ -71,7 +71,7 @@ export default function About() {
                         className="glass p-5"
                         initial={{ opacity: 0, x: 40, y: 20 }}
                         whileInView={{ opacity: 1, x: 0, y: 0 }}
-                        viewport={{ once: true, margin: '-50px' }}
+                        viewport={{ once: false, margin: '-50px' }}
                         transition={{ duration: 0.7, delay: 0.45 }}
                     >
                         <h3 className="flex items-center gap-2 text-sm font-semibold text-accent-violet mb-3">

@@ -38,7 +38,7 @@ export default function Contact() {
                     className="md:col-span-2 space-y-4"
                     initial={{ opacity: 0, x: -30 }}
                     whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
+                    viewport={{ once: false }}
                     transition={{ duration: 0.5 }}
                 >
                     <div className="glass p-5 space-y-4">
@@ -75,7 +75,7 @@ export default function Contact() {
                     onSubmit={handleSubmit}
                     initial={{ opacity: 0, x: 30 }}
                     whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
+                    viewport={{ once: false }}
                     transition={{ duration: 0.5, delay: 0.15 }}
                 >
                     <div className="space-y-4">

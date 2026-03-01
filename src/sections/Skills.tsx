@@ -24,7 +24,7 @@ export default function Skills() {
                 className="font-display text-3xl sm:text-4xl font-bold text-gradient mb-12 text-center"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
+                viewport={{ once: false }}
                 transition={{ duration: 0.6 }}
             >
                 {t('skills.title')}
@@ -39,7 +39,7 @@ export default function Skills() {
                             className="glass p-6 hover:border-white/10 transition-colors duration-300"
                             initial={{ opacity: 0, y: 40 }}
                             whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true, margin: '-50px' }}
+                            viewport={{ once: false, margin: '-50px' }}
                             transition={{ duration: 0.6, delay: 0.15 + i * 0.15 }}
                         >
                             <h3 className="text-sm font-semibold text-accent-cyan mb-4 uppercase tracking-wider">
@@ -50,7 +50,7 @@ export default function Skills() {
                                 variants={container}
                                 initial="hidden"
                                 whileInView="show"
-                                viewport={{ once: true }}
+                                viewport={{ once: false }}
                             >
                                 {categorySkills.map((skill) => {
                                     const Icon = skill.icon;

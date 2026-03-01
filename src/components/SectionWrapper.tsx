@@ -10,7 +10,7 @@ interface Props {
 
 export default function SectionWrapper({ children, className = '', id }: Props) {
     const ref = useRef<HTMLElement>(null);
-    const isInView = useInView(ref, { once: true, margin: '-80px' });
+    const isInView = useInView(ref, { once: false, margin: '-80px' });
     const reduced = useReducedMotion();
 
     return (

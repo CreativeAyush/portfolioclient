@@ -13,7 +13,7 @@ export default function Experience() {
                 className="font-display text-3xl sm:text-4xl font-bold text-gradient mb-12 text-center"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
+                viewport={{ once: false }}
                 transition={{ duration: 0.6 }}
             >
                 {t('experience.title')}
@@ -30,7 +30,7 @@ export default function Experience() {
                             }`}
                         initial={{ opacity: 0, y: 50 }}
                         whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true, margin: '-60px' }}
+                        viewport={{ once: false, margin: '-60px' }}
                         transition={{ duration: 0.7, delay: 0.15 + i * 0.2 }}
                     >
                         {/* Timeline dot */}

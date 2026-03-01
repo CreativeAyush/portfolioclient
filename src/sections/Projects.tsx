@@ -17,7 +17,7 @@ export default function Projects() {
                 className="font-display text-3xl sm:text-4xl font-bold text-gradient mb-12 text-center"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
+                viewport={{ once: false }}
                 transition={{ duration: 0.6 }}
             >
                 {t('projects.title')}
@@ -30,7 +30,7 @@ export default function Projects() {
                         className="glass p-6 group cursor-pointer hover:border-white/12 transition-all duration-300"
                         initial={{ opacity: 0, y: 50 }}
                         whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true, margin: '-60px' }}
+                        viewport={{ once: false, margin: '-60px' }}
                         transition={{ duration: 0.6, delay: 0.15 + i * 0.15 }}
                         whileHover={{ scale: 1.02, rotateX: 2, rotateY: -2 }}
                         style={{ transformPerspective: 800 }}
